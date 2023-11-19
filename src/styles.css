@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #464340;
+    --scrollbar-track-color: #f1f1f1; 
+    --scrollbar-thumb-color: #888; 
+    --scrollbar-thumb-hover-color: #555;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(90deg, white);
+}
+
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color); 
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color); 
+    border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover-color); 
+}
+
+
