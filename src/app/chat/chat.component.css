@@ -36,15 +36,12 @@ html, body {
     text-align: left; 
   }
 
-  
-
   .back-button {
     color: #000;
     margin-right: 10px; 
     text-decoration: none; 
   }
-  
-  
+
   .back-button:hover {
     color: #555;
   }

@@ -43,7 +43,7 @@
     border: 2px solid var(--primary-color);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px; /* Espaçamento entre o input e o botão */
+    margin-bottom: 10px;
     outline: none;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
