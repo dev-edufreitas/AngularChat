@@ -1,0 +1,99 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.slider-thumb {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.slider-thumb::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #17141d;
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 5s linear infinite;
+    z-index: -1;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-container #username {
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px; /* Espaçamento entre o input e o botão */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-container #username:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px var(--secondary-color);
+}
+
+.input-container #enter-chat {
+    width: 100%; 
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-container #enter-chat:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.error-message-card {
+    background-color: #ff5555; 
+    color: #ffffff; 
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+
+@keyframes sliderShape {
+    0%, 100% {
+        border-radius: 42% 58% 50% 20% / 45% 45% 45% 30%;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+    25% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg); 
+    }
+    50% {
+        border-radius: 60% 40% 43% 57% / 41% 59% 60% 40%;
+        transform: translate3d(0, 3px, 0) rotateZ(0.01deg); 
+    }
+    75% {
+        border-radius: 35% 65% 58% 42% / 58% 42% 65% 35%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg); 
+    }
+}

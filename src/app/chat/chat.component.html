@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="card" style="width: 500px;">
+    <div class="card-header">
+      <a href="/" class="back-button">
+        <i class="fas fa-arrow-left"></i> <!-- Ícone da seta -->
+      </a>
+      Chat Global
+    </div>
+    <div class="card-body p-0">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let msg of messages">
+          <div [ngClass]="{'sent-message': msg.isSentByCurrentUser, 'received-message': !msg.isSentByCurrentUser}">
+            <strong class="mb-2">{{ msg.username }}:</strong>
+            <br>
+            <span>{{ msg.message }}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="card-footer">
+      <form (ngSubmit)="submit()" #messageForm="ngForm">
+        <div class="row">
+          <div class="col-md-9">
+            <input type="text" class="form-control" placeholder="Mensagem..." [(ngModel)]="message" name="messageInput">
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-primary w-100" type="submit">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
